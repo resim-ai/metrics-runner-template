@@ -1,0 +1,4 @@
+ruff
+ipykernel
+nbformat
+pre-commit

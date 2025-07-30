@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+    "name": "Python Development",
+    "dockerFile": "Dockerfile",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=root-home-metrics-runner-template,target=/root,type=volume"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.analysis.typeCheckingMode": "basic",
+                "python.analysis.diagnosticMode": "workspace",
+                "python.formatting.provider": "ruff",
+                "[python]": {
+                    "editor.formatOnSave": true
+                }
+            }
+        }
+    },
+    "waitFor": "onCreateCommand",
+    "onCreateCommand": "pip install -r requirements.txt",
+    "postCreateCommand": "pip install -r requirements_dev.txt",
+    "remoteUser": "vscode"
+}

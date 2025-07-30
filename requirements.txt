@@ -1,0 +1,6 @@
+resim-open-core>=0.15.1
+plotly
+numpy
+pandas
+mcap
+protobuf>=5,<6
