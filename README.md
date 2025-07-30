@@ -101,6 +101,6 @@ When running batch metrics, update `data/batch_metrics_config.json` with:
 Then run:
 ```bash
 python src/entrypoint.py \
-  --batch-metrics-config-path ./batch_metrics_config.json \
+  --batch-metrics-config-path ./data/batch_metrics_config.json \
   --output-path ./batch_metrics.binproto
 ```
