@@ -1,4 +1,4 @@
 ruff
 ipykernel
 nbformat
-mypy
+pre-commit

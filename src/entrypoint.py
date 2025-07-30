@@ -7,9 +7,12 @@ from pathlib import Path
 from batch_metrics import run_batch_metrics
 from experience_metrics import run_experience_metrics
 
-DEFAULT_METRICS_PATH = "/tmp/resim/outputs/metrics.binproto"
-DEFAULT_LOG_PATH = "/tmp/resim/outputs/output.csv"
+# Update this to the path of your input log file
+DEFAULT_LOG_PATH = "/tmp/resim/inputs/logs/output.mcap"
+# These shouldn't change
 DEFAULT_BATCH_METRICS_CONFIG_PATH = "/tmp/resim/inputs/batch_metrics_config.json"
+DEFAULT_METRICS_PATH = "/tmp/resim/outputs/metrics.binproto"
+
 
 logging.basicConfig(
     level=logging.INFO,

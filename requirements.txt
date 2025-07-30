@@ -1,4 +1,4 @@
-resim-open-core>=0.15.0
+resim-open-core>=0.15.1
 plotly
 numpy
 pandas
